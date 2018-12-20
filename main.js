@@ -40,6 +40,7 @@ function keyDownHandler(e) {
     leftPressed = true;
   }
 }
+
 function keyUpHandler(e) {
   if(e.keyCode == 39) {
     rightPressed = false;
@@ -48,12 +49,14 @@ function keyUpHandler(e) {
     leftPressed = false;
   }
 }
+
 function mouseMoveHandler(e) {
   var relativeX = e.clientX - canvas.offsetLeft;
   if(relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX - paddleWidth/2;
   }
 }
+
 function collisionDetection() {
   for(var c=0; c<brickColumnCount; c++) {
     for(var r=0; r<brickRowCount; r++) {
